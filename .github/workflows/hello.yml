@@ -1,0 +1,19 @@
+name: Hello Workflow
+
+# The TRIGGER: What starts the pipeline?
+on: [push]
+
+jobs:
+  # The JOB: A unit of work
+  greet:
+    # The RUNNER: The machine executing the job
+    runs-on: ubuntu-latest
+
+    steps:
+      # STEP 1: Using a pre-made action to copy your repo files to the machine
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      # STEP 2: A standard shell command
+      - name: Print greeting
+        run: echo "Hello from GitHub Actions!"
