@@ -20,7 +20,7 @@ jobs:
       
       # STEP 3: Print current date and time
       - name: Print current date and time
-        run: date()
+        run: date
       
       # STEP 4: Print name of the branch
       - name: Print branch name
