@@ -32,6 +32,4 @@ jobs:
 
       # STEP 6: Print the runner's os
       - name: Print the runner's os
-        run: echo uname -a |
-            cat /etc/os-release
-            hostnamectl
+        run: echo uname -a
