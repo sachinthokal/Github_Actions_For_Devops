@@ -32,4 +32,6 @@ jobs:
 
       # STEP 6: Print the runner's os
       - name: Print the runner's os
-        run: echo $GITHUB_OS
+        run: echo uname -a |
+            cat /etc/os-release
+            hostnamectl
