@@ -1,0 +1,20 @@
+name: Multi Job Test
+on: [push]
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Print Job name
+        run: echo "Building the application"
+  test:
+    needs: build
+    runs-on: self-hosted
+    steps:
+        - name: Print Job name
+          run: echo "Running tests"
+  deploy:
+    needs: test
+    runs-on: self-hosted
+    steps:
+        - name: Print Job name
+          run: echo "Deploying the application"
