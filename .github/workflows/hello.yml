@@ -1,4 +1,4 @@
-name: Hello Workflow
+name: First Hello Workflow
 
 # The TRIGGER: What starts the pipeline?
 on: [push]
