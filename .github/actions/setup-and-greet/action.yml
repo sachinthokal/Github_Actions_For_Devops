@@ -1,0 +1,23 @@
+name: 'Setup and Greet'
+description: 'Greets the user and shows system info'
+inputs:
+  name:
+    description: 'The name to greet'
+    required: true
+  language:
+    description: 'The language for the greeting'
+    default: 'en'
+outputs:
+  greeted:
+    description: 'Confirmation that greeting was displayed'
+    value: 'true'
+
+runs:
+  using: "composite"
+  steps:
+    - run: echo "Hello ${{ inputs.name }} in ${{ inputs.language }}!"
+      shell: bash
+    - run: |
+        date
+        echo "Running on ${{ runner.os }}"
+      shell: bash
